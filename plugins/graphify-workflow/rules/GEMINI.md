@@ -17,6 +17,7 @@
 3. **Freshness & Sync Policy (Local-first while coding, Push on Clean Task PASS)**:
    - For quick local lookups when `graphify-out/graph.json` is present and current, you may query it directly (`graphify query "<question>"`, `graphify explain "<node_id>"`, `graphify path "<A>" "<B>"`) in 1 turn instead of running a multi-turn Cloud freshness handshake.
    - When using Cloud MCP, compare the returned `commitSha` against `git rev-parse HEAD`. If equal, trust Cloud MCP.
+   - When scaffolding a **brand-new code directory/module** (e.g., a new `web/` or service folder) or running Inline (`executing-plans`) before pushing, initialize/refresh the local AST graph right after scaffolding and before Final Review (`graphify update .` or `graphify .`, AST-only, zero API cost; ensure `graphify-out/` is in `.git/info/exclude`) so later tasks and reviewers can query `graphify-out/graph.json` instead of crawling raw files.
    - While actively implementing or in a fix loop (unpushed commits / uncommitted edits), do **not** rely on stale Cloud MCP and do **not** push half-baked fix commits just to refresh Cloud: run `graphify update .` (AST-only, zero API cost) after code edits and query local `graphify-out/graph.json`, reading only targeted modified lines.
    - Push to the feature branch **after each task passes review cleanly** so Graphify Cloud re-indexes the verified state for the next task (squash noisy commits on PR merge if desired).
    - Read `graphify-out/GRAPH_REPORT.md` only for broad architecture review when targeted queries are insufficient.

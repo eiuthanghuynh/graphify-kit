@@ -10,6 +10,7 @@
 4. **SDD & Cost Discipline**:
    - Always pass an explicit `Model` tier to `invoke_subagent` (never rely on ambiguous `inherit`): default `flash` for standard Implementers and Task Reviewers; escalate to `pro` for **Final Whole-Branch Review**, core architecture tasks, or fix loops at round 3+.
    - Reuse the active task reviewer via `send_message` for fix-round re-reviews instead of spawning a fresh reviewer per round.
+   - Always generate a `review-package` diff file (excluding lockfiles) for Task Reviewers and **Final Whole-Branch Review** — including after Inline (`executing-plans`) execution — instead of telling reviewers to read every changed source file individually.
    - Do not poll `manage_subagents(Action="list")` while waiting on running children — rely on reactive wakeup.
    - After any context compaction (`CHECKPOINT`), re-read the active progress ledger and `references/fix-loop.md` before entering a fix round.
 5. **Clean GitHub Repo & Branch Isolation**:
