@@ -1,0 +1,6 @@
+{
+  "name": "graphify-workflow",
+  "displayName": "Graphify Workflow Rules",
+  "version": "1.0.0",
+  "description": "Global behavioral rules for using Graphify Cloud MCP and local graphify-out/ knowledge graphs accurately across workspaces and subagents."
+}

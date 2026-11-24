@@ -1,0 +1,17 @@
+# Local AI agent tooling & internal planning docs (never pushed to remote)
+docs/superpowers/
+.gemini/
+.claude/
+.cursor/
+.windsurf/
+.agent/
+.agents/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.superpowers/
+graphify-out/
+PRODUCT.md
+DESIGN.md
+.impeccable/

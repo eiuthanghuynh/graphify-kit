@@ -1,0 +1,6 @@
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.bak-*

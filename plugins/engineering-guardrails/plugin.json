@@ -1,0 +1,6 @@
+{
+  "name": "engineering-guardrails",
+  "displayName": "Engineering Guardrails",
+  "version": "1.0.0",
+  "description": "Lean cross-session guardrails for execution mode gating, visual/browser verification, solo architectural pre-checks, SDD discipline, and clean GitHub hygiene."
+}
