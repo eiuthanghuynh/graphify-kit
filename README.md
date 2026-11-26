@@ -58,7 +58,7 @@ graphify-kit/
 1. **Execution Mode Gate:** Confirms Inline (`executing-plans`) vs `/subagent-driven-development` before coding a multi-task plan.
 2. **Conditional Visual & Browser Gate:** Runs a live `browser` verifier right after foundational UI tasks (Theme Tokens / App Shell) and before claiming Done on any CSS/Theme/Layout/Contrast/Animation refactor.
 3. **Solo Architectural Pre-Check:** Inspects underlying library mechanics (e.g., AntD `cssVar`/specificity) and confirms 2–3 criteria before big solo refactors; fast-paths small 1–2 file bugfixes.
-4. **SDD & Cost Discipline:** Requires explicit `Model` tiers (`flash` default; `pro` for Final Whole-Branch Review, core architecture, or fix round 3+), reuses the active reviewer via `send_message`, bans `manage_subagents(list)` polling, and enforces post-compaction ledger/`fix-loop.md` re-reads.
+4. **SDD & Cost Discipline:** Requires explicit `Model` tiers (`flash` default; `pro` for Final Whole-Branch Review, core architecture, or fix round 3+), reuses the active reviewer via `send_message`, enforces targeted-first test/build cadence (full suite + bundle once before `review-package.diff` and after final fixes), bans `manage_subagents(list)` polling, and enforces post-compaction ledger/`fix-loop.md` re-reads.
 5. **Clean GitHub Repo & Branch Isolation:** Keeps AI tooling/docs/graphs in `.git/info/exclude` (never `.gitignore`), checks `git ls-files` before pushing, and chooses dedicated feature branches vs `git worktree` appropriately.
 
 ### 3. `skill-overrides/` *(Optional)*
